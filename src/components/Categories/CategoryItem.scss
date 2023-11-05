@@ -1,0 +1,49 @@
+/* ===================== Category Item ==================== */
+.category_item_container {
+    flex: 1;
+    margin: var(--sp-0-25);
+    position: relative;
+
+    .gradient {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+        &:hover {
+            background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .info {
+        position: absolute;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .title {
+            color: var(--white-color);
+        }
+
+        button {
+            border: none;
+            padding: var(--sp-0-75) var(--sp-2);
+            background-color: var(--gray-color);
+
+            &:hover {
+                background-color: var(--white-color);
+            }
+        }
+    }
+}

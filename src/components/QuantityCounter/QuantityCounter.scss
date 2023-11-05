@@ -1,0 +1,19 @@
+/* ============ QuantityCounter ============= */
+.quantity__counter {
+    display: flex;
+    width: 5rem;
+    margin-top: 0.5rem;
+    background-color: var(--gray-color);
+
+    button {
+        height: 1.5rem;
+        width: 1.5rem;
+        border: none;
+    }
+    .quantity__count {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+    }
+}

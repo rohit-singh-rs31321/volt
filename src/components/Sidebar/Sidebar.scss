@@ -1,0 +1,115 @@
+.mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0.25rem 0.25rem;
+    background-color: var(--body-color-alt);
+
+    h2 {
+        text-transform: uppercase;
+    }
+
+    .expand__btn {
+        color: var(--title-color);
+        font-size: var(--h1-font-size);
+    }
+}
+
+.options {
+    text-align: center;
+
+    &.show {
+        display: block;
+    }
+    &.hide {
+        display: none;
+    }
+
+    ul {
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0.25rem 0;
+            width: 100%;
+
+            .nav__link {
+                display: flex;
+
+                width: 7rem;
+                color: var(--title-color);
+
+                &.active {
+                    color: var(--primary-color);
+                }
+            }
+
+            .icon {
+                margin-right: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .user-sidebar {
+        display: inline-block;
+        max-width: 18rem;
+        width: 30%;
+        height: max-content;
+        background-color: #ffffff;
+
+        border-radius: 0.5rem;
+        box-shadow: 0px 0px 16px 10px rgba(0, 0, 0, 0.1);
+        margin: var(--sp-5) 0 0 var(--sp-1);
+        padding: 1rem 0;
+
+        .mobile {
+            display: none;
+        }
+
+        .options.hide,
+        .options.show {
+            display: block;
+        }
+
+        .options {
+            ul {
+                display: block;
+                margin-left: var(--sp-1);
+
+                li {
+                    font-size: var(--h2-font-size);
+                    .nav__link {
+                        padding: 1rem;
+                        width: 100%;
+
+                        &:hover {
+                            color: var(--white-color);
+                            background-color: var(--dark-color);
+                        }
+                    }
+
+                    .icon {
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .user-sidebar {
+        max-width: 18rem;
+        width: 35%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .user-sidebar {
+        width: 40%;
+    }
+}

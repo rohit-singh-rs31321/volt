@@ -1,0 +1,62 @@
+/* ================ Wishlist ================ */
+.wishlist_container {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: var(--header-height);
+    height: 110vh;
+
+    .head {
+        position: fixed;
+        top: calc(var(--header-height));
+        left: 50%;
+        transform: translateX(-50%);
+
+        max-width: 1440px;
+        width: 95%;
+        padding: 1rem;
+
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 600;
+        color: var(--white-color);
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),
+            url("../../assets/images/products-image.jpg");
+        background-size: cover;
+
+        @media screen and (min-width: 920px) {
+            top: calc(var(--header-height) + 0.25rem);
+            font-size: 5rem;
+        }
+    }
+
+    .items {
+        position: fixed;
+        top: calc(var(--header-height) + 7rem);
+        padding-left: 1rem;
+
+        text-transform: uppercase;
+        @media screen and (min-width: 920px) {
+            top: calc(var(--header-height) + 10rem);
+            padding-left: 2rem;
+        }
+    }
+
+    .content {
+        position: fixed;
+        top: calc(var(--header-height) + 12rem);
+
+        padding: 0.25rem;
+        margin-left: 1rem;
+        max-width: 1440px;
+        width: 97%;
+        height: calc(100vh - 15rem);
+        overflow-y: scroll;
+
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        gap: 2rem;
+    }
+}

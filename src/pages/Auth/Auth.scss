@@ -1,0 +1,248 @@
+/* ====================== Auth Page ======================= */
+.auth_container {
+    margin-top: 0;
+    margin: 0 auto;
+    padding: 0;
+    transform: translateY(-0.7rem);
+
+    .split-screen {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+
+        .left {
+            height: 12rem;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)),
+                url("../../assets/images/shoe-head.jpg");
+            background-size: cover;
+
+            .copy {
+                color: var(--white-color);
+                text-transform: uppercase;
+                text-align: center;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+
+                h1 {
+                    font-size: var(--biggest-font-size);
+                }
+
+                p {
+                    font-size: var(--small-font-size);
+                    font-weight: var(--font-light);
+                }
+            }
+        }
+
+        .left,
+        .right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right {
+            height: calc(100vh - 16rem);
+            margin-top: 0.25rem;
+
+            .copy {
+                color: var(--text-color);
+                text-align: center;
+                margin: 1rem 0;
+
+                p {
+                    margin: var(--sp-0-5) 0;
+                    font-size: var(--normal-font-size);
+                }
+            }
+
+            form {
+                width: 18rem;
+
+                input[type="text"],
+                input[type="email"],
+                input[type="password"] {
+                    display: block;
+                    width: 100%;
+                    border-radius: 0.25rem;
+                    border: 1px solid var(--text-color-light);
+                    padding: var(--sp-0-75);
+                    margin-bottom: var(--sp-0-5);
+                    font-size: var(--small-font-size);
+                }
+
+                .fullname__container {
+                    display: flex;
+
+                    justify-content: space-between;
+
+                    input {
+                        width: 98%;
+                    }
+                }
+
+                .signup__container-cta {
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+
+                    label,
+                    input {
+                        margin: 0;
+                        cursor: pointer;
+                    }
+                }
+
+                .input__container-cta {
+                    display: flex;
+                    gap: 0.5rem;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .checkbox {
+                        display: flex;
+                        gap: 1rem;
+                        align-items: center;
+                    }
+                    .forgot {
+                        font-size: var(--small-font-size);
+                    }
+
+                    label,
+                    input {
+                        margin: 0;
+                        cursor: pointer;
+                    }
+                }
+
+                button,
+                .login__btn,
+                .signup__btn {
+                    text-align: center;
+                    color: var(--white-color);
+                    background-color: var(--title-color);
+                    width: 100%;
+                    padding: 1rem;
+                    margin: 1rem 0;
+                    border-radius: 0.25rem;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: var(--dark-color);
+                    }
+                }
+
+                .login__container {
+                    text-align: center;
+                }
+
+                .legal {
+                    margin: 0.5rem 0;
+                    .small {
+                        font-size: var(--smaller-font-size);
+                    }
+                }
+
+                a {
+                    color: var(--secondary-color);
+                }
+
+                .input__container {
+                    position: relative;
+
+                    input[type="password"]::-ms-reveal,
+                    input[type="password"]::-ms-clear {
+                        display: none;
+                    }
+
+                    .password-eye {
+                        position: absolute;
+                        top: 1.75rem;
+                        right: 0.5rem;
+                        font-size: var(--h1-font-size);
+                        cursor: pointer;
+
+                        @media screen and(min-width:968px) {
+                            font-size: var(--h2-font-size);
+                        }
+                    }
+                }
+            }
+
+            label {
+                display: block;
+                margin-bottom: var(--sp-0-25);
+                font-size: var(--smaller-font-size);
+            }
+        }
+    }
+}
+
+.password-eye {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .auth_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 4rem;
+
+        .split-screen {
+            flex-direction: row;
+            height: calc(100vh - 4rem);
+
+            .left,
+            .right {
+                display: flex;
+                width: 50%;
+                height: calc(100vh - 4rem);
+            }
+
+            .left {
+                padding: 1rem;
+            }
+            .right {
+                form {
+                    width: 90%;
+                    padding: 1rem 3rem;
+                    border-radius: 0.25rem;
+                    background-color: var(--white-color);
+                    box-shadow: var(--card-box-shadow);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .auth_container {
+        margin-top: 5rem;
+        .split-screen {
+            flex-direction: row;
+            height: calc(calc(100vh - 5rem));
+
+            .left,
+            .right {
+                display: flex;
+                width: 50%;
+                height: auto;
+            }
+
+            .left {
+                padding: 1rem;
+            }
+            .right {
+                form {
+                    width: 80%;
+                    padding: 2rem 4rem;
+                    border-radius: 0.25rem;
+                    background-color: var(--white-color);
+                    box-shadow: var(--card-box-shadow);
+                }
+            }
+        }
+    }
+}

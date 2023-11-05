@@ -1,0 +1,72 @@
+/* ========================== Error ====================== */
+.error_container {
+    position: relative;
+    height: calc(100vh - 3.5rem);
+    padding: 1rem;
+
+    background: #cfcfb6;
+    background: linear-gradient(
+        90deg,
+        rgba(207, 207, 182, 1) 0%,
+        rgba(220, 215, 186, 1) 100%
+    );
+
+    .error-info {
+        font-size: var(--normal-font-size);
+        font-weight: var(--font-medium);
+        margin-bottom: 0.5rem;
+
+        @media screen and (min-width: 1440px) {
+            font-size: var(--h2-font-size);
+        }
+    }
+    .error-subtitle {
+        @media screen and (min-width: 1440px) {
+            font-size: var(--h1-font-size);
+        }
+    }
+
+    .error-title {
+        font-size: 3.35rem;
+        max-width: 350px;
+        margin: 0 0 0.5rem 0;
+
+        @media screen and (min-width: 1440px) {
+            font-size: 6rem;
+        }
+    }
+
+    .error-message {
+        font-weight: var(--font-medium);
+        margin-bottom: 2rem;
+        max-width: 450px;
+        @media screen and (min-width: 1440px) {
+            font-size: var(--h2-font-size);
+            max-width: 650px;
+        }
+    }
+
+    .go_back_btn {
+        text-transform: uppercase;
+        color: var(--white-color);
+        background-color: var(--title-color);
+
+        &:hover {
+            background-color: var(--dark-color);
+        }
+
+        padding: 1rem 2rem;
+    }
+
+    .error_image {
+        display: none;
+        @media screen and (min-width: 1024px) {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 30rem;
+            height: 30rem;
+        }
+    }
+}

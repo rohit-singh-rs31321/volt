@@ -1,0 +1,174 @@
+/* ================== Hero Section ================= */
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../../assets/images/hero-shoe.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: 25%;
+
+    z-index: -1;
+
+    animation: introLoad 2s forwards;
+}
+
+.hero {
+    max-height: 100vh;
+    position: relative;
+    height: calc(100vh - var(--header-height));
+    color: var(--white-color);
+    margin: var(--sp-1) var(--sp-1) 0 var(--sp-1);
+    padding-top: 0;
+
+    animation: moveDown 2s ease-in-out forwards;
+    opacity: 0;
+
+    .hero__title {
+        text-transform: uppercase;
+        font-size: var(--bigger-font-size);
+        margin-top: var(--sp-4);
+    }
+
+    p {
+        font-size: var(--h3-font-size);
+        margin: var(--sp-1) var(--sp-5) 0 0;
+    }
+
+    .down__arrow {
+        position: absolute;
+        font-size: 4rem;
+        bottom: 1rem;
+        left: -1rem;
+        margin: 0;
+
+        width: var(--sp-3);
+
+        animation: moveArrow 0.7s alternate-reverse infinite;
+    }
+
+    @media screen and (min-width: 920px) {
+        height: 100vh;
+    }
+
+    @media screen and (min-width: 1440px) {
+        height: 28rem;
+    }
+
+    @media screen and (min-width: 1650px) {
+        height: 42rem;
+    }
+}
+
+@media screen and (min-width: 375px) {
+    .hero {
+        .down__arrow {
+            bottom: 1rem;
+        }
+    }
+}
+
+@media screen and (min-width: 450px) {
+    .info {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 680px) {
+    .hero {
+        margin: var(--sp-0-75) var(--sp-5);
+
+        .hero__title,
+        p {
+            margin-left: var(--sp-1);
+        }
+
+        .down__arrow {
+            left: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 920px) {
+    .hero-img {
+        left: unset;
+        right: 0;
+        height: 100vh;
+        width: 50%;
+    }
+
+    .hero {
+        color: var(--title-color);
+        height: 100vh;
+        width: 40%;
+
+        .down__arrow {
+            bottom: 0;
+            margin: var(--sp-5) 0;
+        }
+
+        .hero__title {
+            padding-top: 15%;
+        }
+        p {
+            margin-top: var(--sp-2);
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .hero {
+        height: 28rem;
+
+        .hero__title {
+            font-size: var(--biggest-font-size);
+        }
+
+        .down__arrow {
+            display: none;
+        }
+    }
+
+    .hero-img {
+        height: 33rem;
+    }
+}
+
+@media screen and (min-width: 1650px) {
+    .hero {
+        height: 42rem;
+    }
+
+    .hero-img {
+        height: 45rem;
+    }
+}
+
+@keyframes introLoad {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@keyframes moveArrow {
+    from {
+        transform: translateY(-20px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveDown {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

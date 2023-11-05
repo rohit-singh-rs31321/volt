@@ -1,0 +1,56 @@
+.user__container {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+    }
+}
+
+.account__container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: calc(100vh - 12rem);
+
+    .title {
+        display: block;
+        margin: 1rem 0 1rem 0;
+        text-align: center;
+        font-size: var(--h1-font-size);
+    }
+
+    .fullname,
+    .email {
+        display: block;
+        text-align: center;
+        font-size: var(--h2-font-size);
+        margin-top: 0.5rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .account__container {
+        margin-top: 3rem;
+        height: calc(100vh - 9rem);
+        width: 65%;
+
+        .fullname,
+        .email {
+            margin-left: 2rem;
+            text-align: left;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .account__container {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .account__container {
+        width: 75%;
+    }
+}
